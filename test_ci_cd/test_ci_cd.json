@@ -1,0 +1,29 @@
+{
+  "name" : "test_ci_cd",
+  "description" : "",
+  "role" : "arn:aws:iam::906997123624:role/MachineLearning_Developer",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "glueray",
+    "scriptLocation" : "s3://aws-glue-assets-906997123624-us-east-1/scripts/test_ci_cd.py",
+    "pythonVersion" : "3.9",
+    "runtime" : "Ray2.4"
+  },
+  "defaultArguments" : { },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 6,
+  "timeout" : 480,
+  "maxCapacity" : 6.0,
+  "glueVersion" : "4.0",
+  "numberOfWorkers" : 3,
+  "workerType" : "Z.2X",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "etfalgo",
+    "branch" : "main",
+    "folder" : "test_ci_cd"
+  }
+}
